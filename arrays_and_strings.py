@@ -24,3 +24,4 @@ def is_unique(string):
 string = "asdifFfffff"
 #print (is_unique(string))
 
+
