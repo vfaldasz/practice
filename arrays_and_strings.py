@@ -12,6 +12,8 @@ string = "asdifF"
 print (is_unique(string))
 
 
+
+
 def is_unique(string):
     unique = {}
     for letter in string:
@@ -23,6 +25,24 @@ def is_unique(string):
 
 string = "asdifzFffff"
 print (is_unique(string))
+
+
+
+
+def is_unique(string):
+"""Solve problem without data structures. Runtime is n^2"""
+    for i in range(len(string)):
+        for j in range(i+1, len(string)):
+            if string[i] == string[j]:
+                return False
+
+    return True
+string= "pqqrz"
+print(is_unique(string))
+
+
+
+
 
 def is_permutation(string1, string2):
 """1.2 Given two strings, write a method to decide if one is a permutation of the other."""
@@ -45,23 +65,25 @@ string2= 'door'
 print(is_permutation(string1, string2))
 
 
+
+
 def make_url(string):
-    """Write a method to replace all spaces in a string with '%20.'"""
+    """1.3 Write a method to replace all spaces in a string with '%20.'"""
     return string.replace(" ", "%20")
 string= "Mr John Smith    "
-#print(make_url(string))
+print(make_url(string))
+
 
 
 
 def make_url2(string):
     letters = list(string)
     i = len(letters) - 1
-    print (i)
     j = i
-    print (j)
+   
     while letters[i] == " ":
         i -= 1
-    print (i)
+   
     while j != i:
         if letters[i] == " ":
             letters[j-2] = "%"
@@ -76,6 +98,36 @@ def make_url2(string):
 
 string= "Mr John Smith    "
 print(make_url2(string))
+
+
+
+
+def perm_of_palindrome(string):
+    """ 1.4 Given a string, determine if it is a permutation of a palindrome"""
+
+  dict={}
+
+  for letter in string:
+    value =dict.get(letter, 0)+1
+    dict[letter]= value
+
+  counter = 0
+  for value in dict.values(): 
+    if value % 2 == 1: #if values is evenly divisible by 2, then we know its a palindrome. We can allow for only one odd value (i.e in radar 'd' is your odd value.  However, radars (d and s is your odd value, therefore it would not be a palindromee))
+      counter +=1
+    if counter > 1:
+      return False
+
+  return True
+
+string = "tacocat"
+
+print(perm_of_palindrome(string))
+
+
+
+
+
 
 
 
