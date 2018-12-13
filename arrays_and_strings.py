@@ -145,7 +145,6 @@ m= []
 
 
 
-
 def one_away(str1, str2):
 # Determine whether the edit distance between two strings is less than 2.
   len_diff = abs(len(str1) - len(str2))
@@ -172,7 +171,23 @@ def one_away(str1, str2):
         shift = 1
     return True
 
+# Write a function that takes in 3 integers as arguments and returns a list of numbers from 1 to 100 (inclusive), containing only integers that are evenly divisible by at least one of the integers.
+# For example, given 50, 30, and 29, return [29, 30, 50, 58, 60, 87, 90, 100].
 
+def divisible(x,y,z):
+    num = 1
+    a=[]
+    while num<101:
+        if (num % x == 0) or (num % y == 0) or (num % z == 0):
+            a.append(num)
+        num +=1
+    return a
+
+
+l= 50
+m= 30
+n= 29
+#print (divisible(l,m,n))
 
 
 
