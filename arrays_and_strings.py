@@ -191,3 +191,14 @@ n= 29
 
 
 
+def modifying_hello(x):
+    for index, item in enumerate(x):
+        if item in m:
+            x[index]="*"
+    return x
+
+x= ["h", "e", "l", "l", "o"]
+m= ["a", "e", "i", "o", "u"]
+#print (modifying_hello(n))
+
+
