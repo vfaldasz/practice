@@ -201,4 +201,19 @@ x= ["h", "e", "l", "l", "o"]
 m= ["a", "e", "i", "o", "u"]
 #print (modifying_hello(n))
 
+def sum_of_odd_nums(x):
+    m= []
+    result= 0
+    for item in x:
+        if item % 2 ==1:
+            m.append(item)
+            result+= item
+    return result
+        
+
+x= [1,2,3,4,5]
+#print (sum_of_odd_nums(x))
+
+
+
 
