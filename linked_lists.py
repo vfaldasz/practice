@@ -17,6 +17,39 @@ class Node(object):
         self.data = data
         self.next = next
 
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class linkedList():
+    def __init__(self):
+        self.head = None
+
+    def append(self, val):
+        n= Node (val):
+        current = self.head
+        if current is None:
+            self.head = n
+            return
+        while current.next:
+            current = current.next
+        current.next = n
+
+    def extend(self, lst):
+        current = self.head
+        while current and current.next:
+            current = current.next
+        for item in lst:
+            n = Node (item)
+            if self.head is None:
+                self.head = n
+                current = n
+            else:
+                current.next = n
+                current = current.next
+
+        
 
         
 
