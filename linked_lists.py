@@ -11,7 +11,9 @@ def remove_duplicates(self, head):
                 dict[current.next.data] = True
                 current = current.next
     return head
+#_________________________________________
 
+#building appending and extending method for LL
 class Node(object):
     def__init__(self, data, next):
         self.data = data
@@ -49,7 +51,7 @@ class linkedList():
                 current.next = n
                 current = current.next
 
-        
+
 
         
 
