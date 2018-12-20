@@ -51,9 +51,37 @@ class linkedList():
                 current.next = n
                 current = current.next
 
+#_________________________________________________
+
+#create method that reverses a linked_list (Dec 17)
+
+def reverse_ll(self):
+    current = self.head
+    while current:
+        next_node = current.next
+        if self.head == current:
+            current.next = None
+        else: 
+            current.next = self.head
+            self.head = current
+        current= next_node
+
+#________________________________________________
+
+#create method that finds length (counts number) in linked list
+
+def length(self):
+
+    count = 0
+    current = self.head
+
+    while current:
+        count +=1
+        current = current.next
+
+    return count
 
 
-        
 
 
 
