@@ -212,7 +212,17 @@ def sum_of_odd_nums(x):
         
 
 x= [1,2,3,4,5]
-#print (sum_of_odd_nums(x))
+#print (sum_of_odd_nums(x)
+
+
+#given tuples of number of minutes a person viewed a movie, implement a function that calculates the total minutes a person viewed a movie. 
+# i.e. (0,10) (35-55) (5,15) (40,60)
+def sum_of_min():
+    length = max
+    seen =[0] * length
+    for lo, hi in pairs:
+        sum[lo:hi] = 1
+    return sum(seen)
 
 
 
