@@ -226,4 +226,21 @@ def sum_of_min():
 
 
 
+def sum_of_unique_nums(x,y):
+    for item in x:
+        if item not in y:
+            y.append(item)
+    print (y)
+    #return y 
+    
+    result= 0
+    for item in y:
+        result= result + item
+    return result 
+
+n= [2,4,4,6,8,8]
+m= []
+
+
+
 
